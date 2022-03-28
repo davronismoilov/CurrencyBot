@@ -55,7 +55,7 @@ public class ChatObjectService {
     }
 
     public static  boolean check(String chatid){
-        for(var i : getList()){
+        for(ChatObject i : getList()){
             if (i.getChatId().equals(chatid))
                 return true;
         }

@@ -48,7 +48,7 @@ public class AdminBot extends MyBot{
 
         ObjectMapper objectMapper = new ObjectMapper();
 
-        ArrayList<ChatObject> users = objectMapper.readValue(new File(url), new TypeReference<>() {});
+        ArrayList<ChatObject> users = objectMapper.readValue(new File(url), new TypeReference<ArrayList<ChatObject>>() {});
 
         int index = 1;
         for(ChatObject user: users) {

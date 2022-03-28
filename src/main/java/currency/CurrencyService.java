@@ -18,7 +18,7 @@ public class CurrencyService {
             URLConnection urlConnection = url.openConnection();
             InputStream inputStream = urlConnection.getInputStream();
             ObjectMapper objectMapper = new ObjectMapper();
-            ArrayList<Currency> currencies = objectMapper.readValue(inputStream, new TypeReference<>(){});
+            ArrayList<Currency> currencies = objectMapper.readValue(inputStream, new TypeReference<ArrayList<Currency>>(){});
 
 
 
@@ -36,14 +36,9 @@ public class CurrencyService {
         URLConnection urlConnection = url.openConnection();
         InputStream inputStream = urlConnection.getInputStream();
         ObjectMapper objectMapper = new ObjectMapper();
-        ArrayList<Currency> currencies = objectMapper.readValue(inputStream, new TypeReference<>(){});
+        ArrayList<Currency> currencies = objectMapper.readValue(inputStream, new TypeReference<ArrayList<Currency>>(){});
         return currencies.get(index -1);
-
-
     }
 
-    public static void main(String[] args) {
-        System.out.println(getCurrency((int)1));
-    }
 
 }

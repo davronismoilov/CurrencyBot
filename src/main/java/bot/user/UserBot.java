@@ -54,7 +54,7 @@ public class UserBot extends MyBot {
         System.out.println(list);
         String res = mes + " \n\n";
         int ind = 1;
-        for (var i : list) {
+        for (Currency i : list) {
 
 
             res += (ind + ". " + i.getCcyNm_UZ() + " -- " + i.getCcy() + " -- " + i.getRate() + " so'm \n");
@@ -81,7 +81,7 @@ public class UserBot extends MyBot {
         System.out.println(list);
         String res = mes + " \n\n";
         int ind = 1;
-        for (var i : list) {
+        for (Currency i : list) {
             res += (ind + ". " + i.getCcyNm_UZ() + " -- " + i.getCcy()) + "\n";
             ind++;
 
